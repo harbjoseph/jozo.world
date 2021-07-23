@@ -1,0 +1,551 @@
+/* ---------------------------------- Fonts --------------------------------- */
+@font-face {
+    font-family: Zurich-Regular;
+    src: url("https://chezboulay.com/wp-content/themes/Chez%20Boulay/fonts/ZurichBT-Regular.woff");
+}
+
+@font-face {
+    font-family: Zurich-light;
+    src: url("https://chezboulay.com/wp-content/themes/Chez%20Boulay/fonts/ZurichBT-Light.woff");
+}
+
+@font-face {
+    font-family: Zurich-bold;
+    src: url("https://chezboulay.com/wp-content/themes/Chez%20Boulay/fonts/ZurichBT-Bold.woff");
+}
+
+/* -------------------------------- No Class -------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* ----------------------------- Navigation Bar ----------------------------- */
+.nav-ul {
+    display: flex;
+    position: fixed;
+    right: 22px;
+    top: 5px;
+}
+
+.nav-li {
+    font-family: Zurich-Bold;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    color: black;
+    padding: 17.5px 32.5px;
+    border: 2px black solid;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 500ms all ease;
+}
+
+#online {
+    border-right: none;
+}
+
+.nav-li:hover {
+    background-color: black;
+    color: white;
+}
+
+.nav-menu-wrapper {
+    border: 2px black solid;
+    padding: 12.5px 9.5px;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms all ease;
+    cursor: pointer;
+}
+
+.nav-menu {
+    width: 30px;
+    height: 10px;
+    border: black 2px solid;
+    border-left: none;
+    border-right: none;
+    transition: 500ms all ease;
+}
+
+.nav-menu-wrapper:hover {
+    background-color: black;
+}
+
+.nav-menu-wrapper:hover > #burger {
+    border-color: white;
+}
+
+/* ----------------------------- Apply rotation ----------------------------- */
+.apply-txt {
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    animation: apply-animation infinite 5000ms linear;
+    cursor: pointer;
+    transition: all 300ms linear;
+    width: 7rem;
+}
+
+.apply-txt:hover {
+    animation-play-state: paused;
+    width: 5.8rem;
+    bottom: 35px;
+    right: 40px;
+}
+
+@keyframes apply-animation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------------------------- Boulay Logo Image --------------------------- */
+.boulay-img {
+    width: 10.3rem;
+    position: fixed;
+    top: 32px;
+    left: 40px;
+}
+
+
+/* ---------------------------------- Main ---------------------------------- */
+
+/* ---------------------- Part1/Welcome --------------------- */
+.pt-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.circular-text {
+    font-family: Zurich-regular;
+    font-size: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 25px;
+    color: black;
+    display: block;
+    letter-spacing: -1.74px;
+}
+
+.line-1 {
+    width: 2.5rem;
+    color: black;
+    border: black 1px solid;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.main-header {
+    font-family: Zurich-light;
+    font-weight: 300;
+    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 46px;
+    width: 30rem;
+    margin-bottom: 25px;
+}
+
+
+.btn {
+    position: relative;
+    display: inline-block;
+    font-family: Zurich-light;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 20px 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: linear 0.4s;
+    border-bottom: black 2.3px solid;
+    text-transform: uppercase;
+}
+
+.btn.btn-slide-2 {
+    box-shadow: inset 0 0 0 0 black;
+}
+
+.btn.btn-slide-2:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 black;
+}
+
+/* -------------- Food Slider Rotation -------------- */
+.image-rotation {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: -1;
+    top: -25vh;
+    right: -68vh;
+}
+
+
+
+.plate-wrapper {
+    transform: rotate(40deg);
+    display: flex;
+    flex-direction: column;
+}
+
+.plates {
+    width: 400px;
+    transform: rotate(180deg);
+    margin-top: -10rem;
+    margin-left: 10rem;
+}
+
+.plates2 {
+    width: 400px;
+
+}
+
+.plate3 {
+    width: 400px;
+    margin-left: 35rem;
+    margin-top: 10rem;
+    transform: rotate(180deg);
+}
+
+.aliment {
+    position: absolute;
+    width: 150px;
+    right: 175px;
+    bottom: 40px;
+    z-index: -1;
+}
+
+
+/* ------------------------- main vertical separator ------------------------ */
+.verical-separator {
+    height: 70px;
+    border: black solid 1px;
+    margin-top: -50px;
+    margin-bottom: 160px;
+}
+
+/* ---------------------- Part 2: Text ---------------------- */
+.pt-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.circular-text2 {
+    font-family: Zurich-regular;
+    font-weight: 400;
+    font-size: 36px;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.char {
+    margin-left: -8px;
+}
+
+.norhtern-p {
+    font-family: Zurich-regular;
+    font-weight: 400;
+    letter-spacing: 1.97px;
+    font-size: 14px;
+    line-height: 28px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.northern-p1 {
+    width: 692px;
+    text-align: left;
+    margin-right: 27px;
+}
+
+.northern-p2 {
+    text-align: left;
+    width: 692px;
+}
+
+.northern-wrap {
+    display: flex;
+    margin-bottom: 81px;
+}
+
+.signature-img {
+    width: 200px;
+}
+
+.signature-name {
+    font-family: Zurich-regular;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 1.97px;
+}
+
+.signature-wrap {
+    display: flex;
+}
+
+.jean {
+    margin-left: 56px;
+}
+
+/* ---------------------------- Part 3 / pictures --------------------------- */
+.pt-3 {
+    z-index: -1;
+}
+
+/* ---------------------------- Part 4 / Treasure --------------------------- */
+.pt-4 {
+    margin-top: 500px;
+    margin-bottom: 265px;
+}
+
+.treasure-wrapper {
+    display: flex;
+    align-items: center;
+    z-index: -1;
+}
+
+.dish-wrapper {
+    position: absolute;
+    right: -200px;
+    z-index: -1;
+}
+
+.dish-txt {
+    margin-right: 42rem;
+}
+
+.treasure-txt {
+    font-family: Zurich-light;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 46px;
+    color: black;
+    text-transform: uppercase;
+    width: 30rem;
+    text-align: start;
+}
+
+.view3 {
+    float: left;
+    margin-top: 45px;
+}
+
+/* --------------------------- Part 5 / Instagram --------------------------- */
+.pt-5 {
+    display: flex;
+    margin-left: 11rem;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.instagram-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    z-index: -1;
+    margin-right: -11.3rem;
+}
+
+.white-overlay {
+    width: 270px;
+    display: flex;
+    align-items: center;
+    height: 250px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    line-height: 0;
+    z-index: -1;
+}
+
+.instagram-img {
+    display: block;
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+    padding: 0!important;
+    margin: 0!important;
+    max-width: 100%!important;
+    max-width: 100%!important;
+    height: 10px;
+}
+
+.instagram-menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 29.3rem;
+    margin-left: 8.5rem;
+    margin-top: -5px;
+}
+
+.instagram-txt {
+    transform: rotate(-90deg);
+    font-family: Zurich-regular;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.see-more {
+    transform: rotate(-90deg);
+}
+
+/* --------------------------- Part 6 / Gift Card --------------------------- */
+.pt-6 {
+    border: black 2px solid;
+    margin-top: 115px;
+    padding: 120px 550px;
+    border-left: none;
+    border-right: none;
+    margin-left: 3rem;
+}
+
+.centering {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.chars {
+    font-family: Zurich-regular;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.gift-text {
+    margin-bottom: 70px;
+}
+
+.buy {
+    font-family: Zurich-regular;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px 60px;
+    border: 2px solid #000;
+    display: inline-block;
+    margin-top: 50px;
+    color: #1f0e0c;
+    transition: 0.5s ease;
+    border: black solid 2px;
+    letter-spacing: 1.97px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.buy:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* --------------------------------- FOOTER --------------------------------- */
+.copyright-side {
+    display: flex;
+    float: left;
+    justify-content: space-between;
+    width: 52rem;
+    margin-left: -13.5rem;
+}
+
+.boulay-footer-wrapper {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 23px 144px;
+    border-left: black 2px solid;
+    margin-right: -17.5rem;
+}
+
+.copyright {
+    font-family: Zurich-regular;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1.96px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.sponsors {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.sponsor {
+    margin: 0 10px;
+    max-width: 100px;
+    width: calc(100% - 20px);
+    margin-left: 5.5px;
+}
+
+.boulay-footer {
+    width: 100%;
+    letter-spacing: 1.97px;
+    cursor: pointer;
+    text-align: center;
+    float: right;
+}
+
+.joseph {
+    float: left;
+}
+
+u {
+    cursor: pointer;
+}
